@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Personal Page</title>
+  <style>
+    /* ---- Basic Reset ---- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    /* ---- Navigation Bar ---- */
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    #theme-toggle {
+      border: none;
+      background: #fff;
+      color: #333;
+      font-size: 1em;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    #theme-toggle:hover {
+      background-color: #444;
+      color: #fff;
+    }
+
+    /* ---- Hero Section ---- */
+    .hero {
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      color: #fff;
+      text-align: center;
+      padding: 4em 1em;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    /* ---- Main Container ---- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em;
+    }
+
+    .container h2 {
+      margin-bottom: 1em;
+    }
+
+    /* ---- Links Section ---- */
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin: 1em 0;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #0072ff;
+      font-weight: bold;
+      border: 2px solid #0072ff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .links a:hover {
+      background-color: #0072ff;
+      color: #fff;
+    }
+
+    /* ---- Dark Theme Styles ---- */
+    .dark-theme {
+      background-color: #111;
+      color: #eee;
+    }
+
+    .dark-theme nav {
+      background-color: #000;
+    }
+
+    .dark-theme .hero {
+      background: linear-gradient(135deg, #4ca1af, #2c3e50);
+    }
+
+    .dark-theme .links a {
+      color: #4ca1af;
+      border-color: #4ca1af;
+    }
+
+    .dark-theme .links a:hover {
+      background-color: #4ca1af;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <button id="theme-toggle">Toggle Theme</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your Name</h1>
+    <p>Welcome to my personal webpage!</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      Introduce yourself here. Mention your background, interests, or any
+      other info you’d like visitors to know.
+    </p>
+
+    <h3>My Documents</h3>
+    <div class="links">
+      <!-- Replace these links with your actual PDF files -->
+      <a href="resume.pdf" target="_blank">View CV</a>
+      <a href="essay.pdf" target="_blank">Read Essay</a>
+    </div>
+
+    <h3>Something I'd Like to Share</h3>
+    <p>
+      Here you can write a short paragraph or personal statement related
+      to your work, goals, or anything else you find relevant.
+    </p>
+  </div>
+
+  <!-- JavaScript for Theme Toggle -->
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
+
+</body>
+</html>
